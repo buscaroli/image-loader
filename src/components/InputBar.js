@@ -1,24 +1,47 @@
 import React from 'react'
 
 
-const InputBar = (props) => {
-    return(
-        <div className='form-container'>
-            <form className='form'> 
-                <label className='form__label' htmlFor='form-text'>
-                    Enter your Search below
-                </label>
-                <input className='form__text' type='text' name='form-text' placeholder='puppies'>
-                    
-                </input>
-                <button 
-                    className='form__btn'
-                    onClick={props.onButtonClick}>
-                        {props.text}
-                </button> 
-            </form>
-        </div>
-    )
+class InputBar extends React.Component  {
+
+    state = {
+        text: ''
+    }
+
+    handleSubmit = (term) => {
+        term.preventDefault()
+        this.props.onSearchSubmit(this.state.text)
+    }
+
+    handleInputChange = (event) => {
+        this.setState({text: event.target.value})
+    }
+
+
+    render() {
+        return(
+            <div className='form-container'>
+                <form 
+                className='form'
+                onSubmit={this.handleSubmit}> 
+                    <label className='form__label' htmlFor='form-text'>
+                        Enter your Search below
+                    </label>
+                    <input 
+                        className='form__text'
+                        onChange={this.handleInputChange} 
+                        type='text' 
+                        name='form-text' 
+                        placeholder='puppies'/>
+                    <button 
+                        className='form__btn'
+                        onSubmit={this.handleSubmit}>
+                        Search
+                    </button> 
+                </form>
+            </div>
+        )
+    }
+    
 }
 
 export default InputBar

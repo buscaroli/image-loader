@@ -1,0 +1,26 @@
+.container {
+    box-sizing: border-box;
+}
+
+.figure {
+    padding: .5rem;
+    display: inline-block;
+    width: 30rem;
+    box-shadow: $box-shadow;
+    border-radius: .3rem;
+    
+    &__img {
+        padding: .5rem;
+        width: 100%;
+        background-color: $color-primary;
+        border-radius: .3rem;
+    }
+
+    &__caption {
+        text-align:center;
+        font-family: Lato, sans-serif;
+        font-size: $font-size-default;
+        font-weight: 600;
+        color: $color-grey-light;
+    }
+}
