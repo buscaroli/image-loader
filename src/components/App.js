@@ -5,13 +5,6 @@ import InputBar from './InputBar'
 import ImageList from './ImageList'
 
 
-const reqPics = axios.create({
-    baseURL: 'https://api.unsplash.com/search/photos',
-    headers: {
-        Authorization: 'Client-ID bS0yZO5AIA_63xuYrp6J_bgJHn44x6YUrMP0l7bCs20'
-    }
-})
-
 class App extends React.Component {
     
     // State will keep an array of the images to be displayed.
@@ -26,11 +19,15 @@ class App extends React.Component {
     onSearchSubmit = async (term) => {
         // console.log(this.state.text)
         try {
-            const response = await reqPics.get(
+            const response = await axios.get(
                 'https://api.unsplash.com/search/photos',
                 {
                     params: {
-                        query: term
+                        query: term,
+                        per_page: 12
+                    },
+                    headers: {
+                        Authorization: 'Client-ID bS0yZO5AIA_63xuYrp6J_bgJHn44x6YUrMP0l7bCs20'
                     }
                 }
             )
@@ -38,7 +35,7 @@ class App extends React.Component {
             this.setState({
                 images: response.data.results
             })
-            console.log(this.state.images)
+            // console.log(this.state.images)
         }
         catch (e){
             console.log('Error: ', e)

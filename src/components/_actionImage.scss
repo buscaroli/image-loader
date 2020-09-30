@@ -1,18 +1,16 @@
 .figure {
     position: relative;
     margin-top: 3rem;
-    width: 30rem;
+    max-width: 40rem;
     box-shadow: $box-shadow;
     border-radius: .3rem;
     border: .2rem solid $color-primary;
-    
-
+    flex-basis: 30rem;
     
     &__img {
-        width: 100%;
+        max-width: 100%;
         filter: grayscale(100%);
         transition: filter 1.2s;
-        
         
         &:hover {
             filter: grayscale(0);

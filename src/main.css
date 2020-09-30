@@ -66,12 +66,13 @@ body {
 .figure {
   position: relative;
   margin-top: 3rem;
-  width: 30rem;
+  max-width: 40rem;
   box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.2);
   border-radius: .3rem;
-  border: 0.2rem solid #ff8c00; }
+  border: 0.2rem solid #ff8c00;
+  flex-basis: 30rem; }
   .figure__img {
-    width: 100%;
+    max-width: 100%;
     filter: grayscale(100%);
     transition: filter 1.2s; }
     .figure__img:hover {
