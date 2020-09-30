@@ -3,6 +3,8 @@ import React from 'react'
 
 class InputBar extends React.Component  {
 
+    
+
     state = {
         text: ''
     }

@@ -1,4 +1,8 @@
 .imageList {
-    width: 80%;
-    margin: auto;
+    display: flex;
+    max-width: $width-main-default;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

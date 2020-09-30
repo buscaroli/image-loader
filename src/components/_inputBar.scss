@@ -1,6 +1,6 @@
 .form-container {
     box-sizing: border-box;
-    width: 80rem;
+    max-width: $width-main-default;
     display: block;
     margin: auto;
 }

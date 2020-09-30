@@ -18,7 +18,7 @@ body {
 
 .form-container {
   box-sizing: border-box;
-  width: 80rem;
+  max-width: 100rem;
   display: block;
   margin: auto; }
 
@@ -55,24 +55,40 @@ body {
     .form__btn:active {
       transform: translateY(0.1rem); }
 
-.container {
-  box-sizing: border-box; }
+.imageList {
+  display: flex;
+  max-width: 100rem;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .figure {
-  padding: .5rem;
-  display: inline-block;
+  position: relative;
+  margin-top: 3rem;
   width: 30rem;
   box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.2);
   border-radius: .3rem;
-  float: left; }
+  border: 0.2rem solid #ff8c00; }
   .figure__img {
-    padding: .5rem;
     width: 100%;
-    background-color: #ff8c00;
-    border-radius: .3rem; }
+    filter: grayscale(100%);
+    transition: filter 1.2s; }
+    .figure__img:hover {
+      filter: grayscale(0); }
   .figure__caption {
+    width: 100%;
     text-align: center;
     font-family: Lato, sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
     color: #ccc; }
+  .figure__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    z-index: 10; }
+    .figure__icon:hover {
+      cursor: pointer;
+      transform: scale(1.05); }

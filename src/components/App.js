@@ -50,13 +50,7 @@ class App extends React.Component {
         return(
             <div>
                 <InputBar text={this.state.text} onSearchSubmit={this.onSearchSubmit}/>
-                <ImageList images={this.state.images}/>
-                {/* <Image 
-                    alt_description='litter of dogs fall in line beside wall' 
-                    url='https://images.unsplash.com/photo-1529472119196-cb724127a98e?ixlib=rb-1.2.1&auto=format&fit=crop&w=621&q=80' 
-                    description='Pink Wall Full of Dogs'
-                /> */}
-                
+                <ImageList images={this.state.images}/> 
             </div>
         )
     }

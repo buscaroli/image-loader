@@ -1,11 +1,12 @@
 import React from 'react'
 
-import FramedImage from './FramedImage'
+import ActionImage from './ActionImage'
 
 
 const ImageList = (props) => {
+
     const list = props.images.map(img => 
-        <FramedImage 
+        <ActionImage 
             key={img.id}
             descripton={img.description}
             alt_description={img.alt_description}

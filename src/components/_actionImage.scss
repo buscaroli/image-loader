@@ -1,17 +1,21 @@
 .figure {
+    position: relative;
     margin-top: 3rem;
     width: 30rem;
     box-shadow: $box-shadow;
     border-radius: .3rem;
     border: .2rem solid $color-primary;
+    
 
     
     &__img {
         width: 100%;
-        transition: all .3s;
+        filter: grayscale(100%);
+        transition: filter 1.2s;
+        
         
         &:hover {
-            transform: scale(1.2);
+            filter: grayscale(0);
         }
     }
 
@@ -22,5 +26,19 @@
         font-size: $font-size-default;
         font-weight: 600;
         color: $color-grey-light;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: .5rem;
+        z-index: 10;
+        
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
     }
 }
